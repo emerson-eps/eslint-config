@@ -2,11 +2,10 @@
   "name": "@emerson-eps/eslint-config",
   "version": "1.0.0",
   "description": "Shared ESLint config for Emerson E&P Software",
-  "license": "MIT",
-  "main": "index.js",
-  "files": [
-    ".eslintrc.js",
-    "index.js"
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "typescript"
   ],
   "homepage": "https://github.com/emerson-eps/eslint-config",
   "bugs": {
@@ -16,10 +15,11 @@
     "type": "git",
     "url": "https://github.com/emerson-eps/eslint-config.git"
   },
-  "keywords": [
-    "eslint",
-    "eslintconfig",
-    "typescript"
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    ".eslintrc.js",
+    "index.js"
   ],
   "scripts": {
     "lint:fix": "eslint . --fix",
@@ -39,12 +39,12 @@
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "4.x"
   },
-  "peerDependencies": {
+  "devDependencies": {
     "eslint": ">= 7",
     "prettier": ">= 2",
     "typescript": ">= 3.7"
   },
-  "devDependencies": {
+  "peerDependencies": {
     "eslint": ">= 7",
     "prettier": ">= 2",
     "typescript": ">= 3.7"
