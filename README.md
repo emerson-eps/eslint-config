@@ -9,7 +9,7 @@ The ESLint config and Prettier config must both be added to get the full shared 
 ### (1) Install the shared Prettier and ESLint configs
 
 ```bash
-npm install --save-dev "https://github.com/emerson-eps/prettier-config.git#main" "https://github.com/emerson-eps/eslint-config.git#main"
+npm install --save-dev @emerson-eps/prettier-config @emerson-eps/eslint-config
 ```
 
 If you have not already installed `prettier` and `eslint` install those as well:
