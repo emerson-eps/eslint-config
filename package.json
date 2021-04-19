@@ -1,0 +1,52 @@
+{
+  "name": "@emerson-eps/eslint-config",
+  "version": "1.0.0",
+  "description": "Shared ESLint config for Emerson E&P Software",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "typescript"
+  ],
+  "homepage": "https://github.com/emerson-eps/eslint-config",
+  "bugs": {
+    "url": "https://github.com/emerson-eps/eslint-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emerson-eps/eslint-config.git"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    ".eslintrc.js",
+    "index.js"
+  ],
+  "scripts": {
+    "lint:fix": "eslint . --fix",
+    "print-config": "eslint --print-config .eslintrc.js",
+    "test": "prettier . --check && eslint ."
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "4.x",
+    "@typescript-eslint/parser": "4.x",
+    "babel-eslint": "10.x",
+    "eslint-config-prettier": "8.x",
+    "eslint-config-react-app": "6.x",
+    "eslint-plugin-flowtype": "5.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-prettier": "3.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "4.x"
+  },
+  "devDependencies": {
+    "eslint": ">= 7",
+    "prettier": ">= 2",
+    "typescript": ">= 3.7"
+  },
+  "peerDependencies": {
+    "eslint": ">= 7",
+    "prettier": ">= 2",
+    "typescript": ">= 3.7"
+  }
+}
