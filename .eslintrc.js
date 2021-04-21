@@ -45,10 +45,8 @@ module.exports = {
     },
   },
   rules: {
-    // Set console calls to emit warnings as not enabled by eslint:recommended contrary to docs
+    // Set console calls to emit warnings as not enabled by eslint:recommended
     "no-console": "warn",
-    // Increase @typescript-eslint/no-unused-vars from warning to error
-    "@typescript-eslint/no-unused-vars": "error",
     // Increase react-hooks/exhaustive-deps from warning to error
     "react-hooks/exhaustive-deps": "error",
   },
