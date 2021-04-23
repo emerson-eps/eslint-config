@@ -61,7 +61,7 @@ Code can then be linted with:
 npm run lint
 ```
 
-CI pipelines should be configured to fail on linting errors.
+CI pipelines should be configured to fail on linting warnings.
 
 ## Integration with Visual Studio Code
 
