@@ -36,6 +36,8 @@ module.exports = {
     "plugin:react/recommended",
     // Additional recommended react-hooks rules not all included in react-app
     "plugin:react-hooks/recommended",
+    // SonarJS recommended set
+    "plugin:sonarjs/recommended",
     // Prettier config comes last as it disables conflicting ESLint rules enabled by other sets
     "plugin:prettier/recommended",
   ],
