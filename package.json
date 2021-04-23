@@ -24,8 +24,8 @@
   "scripts": {
     "lint:fix": "eslint . --fix",
     "print-config": "eslint --print-config .eslintrc.js",
-    "test": "prettier . --check && eslint .",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "test": "prettier . --check && eslint ."
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "4.x",
