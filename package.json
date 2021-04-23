@@ -38,7 +38,8 @@
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-prettier": "3.x",
     "eslint-plugin-react": "7.x",
-    "eslint-plugin-react-hooks": "4.x"
+    "eslint-plugin-react-hooks": "4.x",
+    "eslint-plugin-sonarjs": "^0.7.0"
   },
   "devDependencies": {
     "eslint": ">= 7",
