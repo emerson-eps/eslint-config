@@ -28,7 +28,7 @@
     "test": "prettier . --check && eslint ."
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "4.x",
+    "@typescript-eslint/eslint-plugin": "4.25.0",
     "@typescript-eslint/parser": "4.x",
     "babel-eslint": "10.x",
     "eslint-config-prettier": "8.x",
