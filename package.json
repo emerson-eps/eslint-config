@@ -23,6 +23,7 @@
   ],
   "scripts": {
     "lint:fix": "eslint . --fix",
+    "prettier:fix": "prettier . --write",
     "print-config": "eslint --print-config .eslintrc.js",
     "semantic-release": "semantic-release",
     "test": "prettier . --check && eslint ."
