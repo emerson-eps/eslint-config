@@ -63,7 +63,7 @@ Add a lint script to your `package.json`, for example:
 
 Code can then be linted with:
 
-```
+```sh
 npm run lint
 ```
 
