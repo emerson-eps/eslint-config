@@ -32,12 +32,7 @@ module.exports = {
     "node_modules",
     "tmp",
   ],
-  plugins: [
-    "@typescript-eslint",
-    "react",
-    "react-hooks",
-    "sonarjs",
-  ],
+  plugins: ["@typescript-eslint", "react", "react-hooks", "sonarjs"],
   extends: [
     // Base recommended set of rules
     "eslint:recommended",
@@ -56,7 +51,7 @@ module.exports = {
     // SonarJS recommended set
     "plugin:sonarjs/recommended",
     // Prettier config comes last as it disables conflicting ESLint rules enabled by other sets
-    "prettier"
+    "prettier",
   ],
   settings: {
     react: {
