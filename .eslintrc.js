@@ -76,6 +76,21 @@ module.exports = {
         "import/no-anonymous-default-export": "off", // Not helpful
       },
     },
+    // Cypress overrides
+    {
+      files: ["cypress/**/*.{j,t}s?(x)"],
+      plugins: ["cypress"],
+      extends: ["plugin:cypress/recommended"],
+      rules: {
+        //https://github.com/SonarSource/eslint-plugin-sonarjs/issues/176
+        //https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/src/rules/no-duplicate-string.ts
+        //not compatible with asserts like should("be.visible")
+        // > 10 chars and contains a separator "." so it would have to follow the no-duplicate-string rule
+        "sonarjs/no-duplicate-string": "off",
+        //Default complexity is 15 but since cypress test have some before and after hooks, let's increase a little bit
+        "sonarjs/cognitive-complexity": ["error", 20],
+      },
+    },
   ],
   reportUnusedDisableDirectives: true,
 };
