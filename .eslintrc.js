@@ -10,9 +10,12 @@ module.exports = {
   // it as an override for all ts and tsx files, otherwise babel-eslint is used.
   // parser: "@typescript-eslint/parser",
   parserOptions: {
+    ecmaVersion: 6,
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
+    project: "./tsconfig.json",
   },
   env: {
     node: true,
@@ -20,7 +23,16 @@ module.exports = {
     jest: true,
     jasmine: true,
   },
-  plugins: ["@typescript-eslint", "react", "react-hooks", "prettier"],
+  ignorePatterns: [
+    // same as exclude in tsconfig.json
+    "build",
+    "coverage",
+    "dist*",
+    "doc",
+    "node_modules",
+    "tmp",
+  ],
+  plugins: ["@typescript-eslint", "react", "react-hooks", "sonarjs"],
   extends: [
     // Base recommended set of rules
     "eslint:recommended",
@@ -39,7 +51,7 @@ module.exports = {
     // SonarJS recommended set
     "plugin:sonarjs/recommended",
     // Prettier config comes last as it disables conflicting ESLint rules enabled by other sets
-    "plugin:prettier/recommended",
+    "prettier",
   ],
   settings: {
     react: {
@@ -47,10 +59,51 @@ module.exports = {
     },
   },
   rules: {
+    //************************************************************************
+    // Enforced
+    //
     // Set console calls to emit warnings as not enabled by eslint:recommended
-    "no-console": "warn",
+    "no-console": "error",
     // Increase react-hooks/exhaustive-deps from warning to error
     "react-hooks/exhaustive-deps": "error",
+    // //************************************************************************
+    // // Relaxed: rules we are progressively adopting
+    // //
+    // // enforce types
+    // "@typescript-eslint/no-explicit-any": "warn",
+    // // enforce typed exports
+    // "@typescript-eslint/explicit-module-boundary-types": "warn",
+    // // enforce clean code
+    // "@typescript-eslint/no-unused-vars": "warn",
+    // // enforce interface naming convention
+    // "@typescript-eslint/naming-convention": [
+    //   "warn",
+    //   {
+    //     "selector": "interface",
+    //     "format": ["PascalCase"],
+    //     "custom": {
+    //       "regex": "^I[A-Z]",
+    //       "match": true
+    //     }
+    //   },
+    //   {
+    //     "selector": "typeAlias",
+    //     "format": ["PascalCase"],
+    //     "custom": {
+    //       "regex": "^T[A-Z]",
+    //       "match": true
+    //     }
+    //   }
+    // ],
+    // // enforce import ordering
+    // "sort-imports": [
+    //   "warn",
+    //   {
+    //     "allowSeparatedGroups": true,
+    //     "memberSyntaxSortOrder": ["none", "all", "single", "multiple"],
+    //     "ignoreCase": false
+    //   }
+    // ],
   },
   overrides: [
     // Typescript overrides
