@@ -66,44 +66,41 @@ module.exports = {
     "no-console": "error",
     // Increase react-hooks/exhaustive-deps from warning to error
     "react-hooks/exhaustive-deps": "error",
-    // //************************************************************************
-    // // Relaxed: rules we are progressively adopting
-    // //
-    // // enforce types
-    // "@typescript-eslint/no-explicit-any": "warn",
-    // // enforce typed exports
-    // "@typescript-eslint/explicit-module-boundary-types": "warn",
-    // // enforce clean code
-    // "@typescript-eslint/no-unused-vars": "warn",
-    // // enforce interface naming convention
-    // "@typescript-eslint/naming-convention": [
-    //   "warn",
-    //   {
-    //     "selector": "interface",
-    //     "format": ["PascalCase"],
-    //     "custom": {
-    //       "regex": "^I[A-Z]",
-    //       "match": true
-    //     }
-    //   },
-    //   {
-    //     "selector": "typeAlias",
-    //     "format": ["PascalCase"],
-    //     "custom": {
-    //       "regex": "^T[A-Z]",
-    //       "match": true
-    //     }
-    //   }
-    // ],
-    // // enforce import ordering
-    // "sort-imports": [
-    //   "warn",
-    //   {
-    //     "allowSeparatedGroups": true,
-    //     "memberSyntaxSortOrder": ["none", "all", "single", "multiple"],
-    //     "ignoreCase": false
-    //   }
-    // ],
+    // enforce types
+    "@typescript-eslint/no-explicit-any": "error",
+    // enforce typed exports
+    "@typescript-eslint/explicit-module-boundary-types": "error",
+    // enforce clean code
+    "@typescript-eslint/no-unused-vars": "error",
+    // enforce interface naming convention
+    "@typescript-eslint/naming-convention": [
+       "error",
+       {
+         "selector": "interface",
+         "format": ["PascalCase"],
+         "custom": {
+           "regex": "^I[A-Z]",
+           "match": true
+         }
+       },
+       {
+         "selector": "typeAlias",
+         "format": ["PascalCase"],
+         "custom": {
+           "regex": "^T[A-Z]",
+           "match": true
+         }
+       }
+    ],
+    // enforce import ordering
+    "sort-imports": [
+       "error",
+       {
+         "allowSeparatedGroups": true,
+         "memberSyntaxSortOrder": ["none", "all", "single", "multiple"],
+         "ignoreCase": false
+       }
+    ],
   },
   overrides: [
     // Typescript overrides
