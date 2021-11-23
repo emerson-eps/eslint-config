@@ -62,12 +62,15 @@ module.exports = {
     //************************************************************************
     // Enforced
     //
+    "curly": "error",
     // Set console calls to emit warnings as not enabled by eslint:recommended
     "no-console": "error",
     // Increase react-hooks/exhaustive-deps from warning to error
     "react-hooks/exhaustive-deps": "error",
     // enforce types
     "@typescript-eslint/no-explicit-any": "error",
+    // Bans specific types from being used (e.g. builtin types)
+    "@typescript-eslint/ban-types": "error",
     // enforce typed exports
     "@typescript-eslint/explicit-module-boundary-types": "error",
     // enforce clean code
@@ -76,30 +79,30 @@ module.exports = {
     "@typescript-eslint/naming-convention": [
       "error",
       {
-        "selector": "interface",
-        "format": ["PascalCase"],
-        "custom": {
-          "regex": "^I[A-Z]",
-          "match": true
-        }
+        selector: "interface",
+        format: ["PascalCase"],
+        custom: {
+          regex: "^I[A-Z]",
+          match: true,
+        },
       },
       {
-        "selector": "typeAlias",
-        "format": ["PascalCase"],
-        "custom": {
-          "regex": "^T[A-Z]",
-          "match": true
-        }
-      }
+        selector: "typeAlias",
+        format: ["PascalCase"],
+        custom: {
+          regex: "^T[A-Z]",
+          match: true,
+        },
+      },
     ],
     // enforce import ordering
     "sort-imports": [
       "error",
       {
-        "allowSeparatedGroups": true,
-        "memberSyntaxSortOrder": ["none", "all", "single", "multiple"],
-        "ignoreCase": false
-      }
+        allowSeparatedGroups: true,
+        memberSyntaxSortOrder: ["none", "all", "single", "multiple"],
+        ignoreCase: false,
+      },
     ],
   },
   overrides: [
