@@ -62,7 +62,7 @@ module.exports = {
     //************************************************************************
     // Enforced
     //
-    "curly": "error",
+    curly: "error",
     // Set console calls to emit warnings as not enabled by eslint:recommended
     "no-console": "error",
     // Increase react-hooks/exhaustive-deps from warning to error
