@@ -22,11 +22,15 @@
     "index.js"
   ],
   "scripts": {
+    "build": "npm run print-config:file",
     "lint:fix": "eslint . --fix",
+    "lint:verbose": "eslint -f stylish .",
     "prettier:fix": "prettier . --write",
     "print-config": "eslint --print-config .eslintrc.js",
+    "print-config:file": "eslint --print-config .eslintrc.js > config.json",
     "semantic-release": "semantic-release",
-    "test": "prettier . --check && eslint ."
+    "test": "prettier . --check && eslint .",
+    "tsc": "tsc"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.33.0",

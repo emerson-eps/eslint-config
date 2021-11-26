@@ -49,6 +49,10 @@ Specify the package in the [`extends`](http://eslint.org/docs/user-guide/configu
 }
 ```
 
+### List of current rules
+
+The list of applied rules can be found [here](./config.json)
+
 ## Running ESLint on your code
 
 Add a lint script to your `package.json`, for example:

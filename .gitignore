@@ -2,3 +2,5 @@
 node_modules/
 # Ignore local build
 emerson-eps-eslint-config-*.tgz
+# tsc
+tmp

@@ -9,6 +9,7 @@ module.exports = {
   // No need to define @typescript-eslint/parser as the react-app config specifies
   // it as an override for all ts and tsx files, otherwise babel-eslint is used.
   // parser: "@typescript-eslint/parser",
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 6,
     sourceType: "module",
