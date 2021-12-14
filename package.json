@@ -23,8 +23,9 @@
   ],
   "scripts": {
     "build": "npm run print-config:file",
+    "lint": "eslint . --max-warnings=0",
     "lint:fix": "eslint . --fix",
-    "lint:verbose": "eslint -f stylish .",
+    "lint:verbose": "eslint --max-warnings=0 -f stylish .",
     "prettier:fix": "prettier . --write",
     "print-config": "eslint --print-config .eslintrc.js",
     "print-config:file": "eslint --print-config .eslintrc.js > config.json",

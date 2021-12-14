@@ -10,7 +10,7 @@ This is the home of the shared E&P Software ESLint configs. The default config s
 
 ## Usage
 
-The ESLint config and Prettier config must both be added to get the full shared configuration. The ESLint configuration includes the prettier plugin which will load the prettier config and report issues as errors.
+The ESLint config and Prettier config must both be added to get the full shared configuration.
 
 ### (1) Install the shared Prettier and ESLint configs
 
@@ -26,12 +26,12 @@ npm install --save-dev prettier eslint
 
 ### (2) Configure Prettier
 
-Add `@emerson-eps/prettier-config` to your `package.json`:
+Add `@emerson-eps/prettier-config` to your `.prettierrc.js`:
 
-```json
-{
-  "prettier": "@emerson-eps/prettier-config"
-}
+```js
+module.exports = {
+  ...require("@emerson-eps/prettier-config"),
+};
 ```
 
 For more advanced setups, including how to override settings, see the instructions in the [@emerson-eps/prettier-config](https://github.com/emerson-eps/prettier-config) repository.
@@ -60,7 +60,7 @@ Add a lint script to your `package.json`, for example:
 ```json
 {
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint . --max-warnings=0"
   }
 }
 ```
