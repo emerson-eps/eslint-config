@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "sourceMap": true,
+    "target": "es6",
+    "lib": ["es6", "dom", "esnext"],
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/@types/*", "*"]
+    },
+    //not part of strict, but not ready for it
+    //"noImplicitReturns": true,
+    //"noUnusedParameters": true,
+    //help on integration tests
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "checkJs": true,
+    // for other js/json files
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    // decorators, e.g. for tsoa
+    "experimentalDecorators": true
+  },
+  "exclude": ["node_modules", "tmp"]
+}

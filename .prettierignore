@@ -1,0 +1,18 @@
+# Use .gitignore syntax
+
+# Generated/third-party code
+tmp/
+node_modules/
+
+# IDE Config
+.vscode/
+.idea/
+
+# tooling
+.scannerwork/
+
+# Generated files
+config.json
+
+# npm can rewrite the whole package.json file with some commands
+package.json

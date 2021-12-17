@@ -5,10 +5,7 @@
 
 // https://eslint.org/docs/developer-guide/shareable-configs#publishing-a-shareable-config
 module.exports = {
-  // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md
-  // No need to define @typescript-eslint/parser as the react-app config specifies
-  // it as an override for all ts and tsx files, otherwise babel-eslint is used.
-  // parser: "@typescript-eslint/parser",
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 6,
     sourceType: "module",
@@ -62,48 +59,49 @@ module.exports = {
     //************************************************************************
     // Enforced
     //
+    curly: "warn",
     // Set console calls to emit warnings as not enabled by eslint:recommended
-    "no-console": "error",
+    "no-console": "warn",
     // Increase react-hooks/exhaustive-deps from warning to error
-    "react-hooks/exhaustive-deps": "error",
-    // //************************************************************************
-    // // Relaxed: rules we are progressively adopting
-    // //
-    // // enforce types
-    // "@typescript-eslint/no-explicit-any": "warn",
-    // // enforce typed exports
-    // "@typescript-eslint/explicit-module-boundary-types": "warn",
-    // // enforce clean code
-    // "@typescript-eslint/no-unused-vars": "warn",
-    // // enforce interface naming convention
+    "react-hooks/exhaustive-deps": "warn",
+    // enforce types
+    "@typescript-eslint/no-explicit-any": "warn",
+    // Bans specific types from being used (e.g. builtin types)
+    "@typescript-eslint/ban-types": "warn",
+    // enforce typed exports
+    "@typescript-eslint/explicit-module-boundary-types": "warn",
+    // enforce clean code
+    "@typescript-eslint/no-unused-vars": "warn",
+    // Keep naming convention for later
+    // enforce interface naming convention
     // "@typescript-eslint/naming-convention": [
     //   "warn",
     //   {
-    //     "selector": "interface",
-    //     "format": ["PascalCase"],
-    //     "custom": {
-    //       "regex": "^I[A-Z]",
-    //       "match": true
-    //     }
+    //     selector: "interface",
+    //     format: ["PascalCase"],
+    //     custom: {
+    //       regex: "^I[A-Z]",
+    //       match: true,
+    //     },
     //   },
     //   {
-    //     "selector": "typeAlias",
-    //     "format": ["PascalCase"],
-    //     "custom": {
-    //       "regex": "^T[A-Z]",
-    //       "match": true
-    //     }
-    //   }
+    //     selector: "typeAlias",
+    //     format: ["PascalCase"],
+    //     custom: {
+    //       regex: "^T[A-Z]",
+    //       match: true,
+    //     },
+    //   },
     // ],
-    // // enforce import ordering
-    // "sort-imports": [
-    //   "warn",
-    //   {
-    //     "allowSeparatedGroups": true,
-    //     "memberSyntaxSortOrder": ["none", "all", "single", "multiple"],
-    //     "ignoreCase": false
-    //   }
-    // ],
+    // enforce import ordering
+    "sort-imports": [
+      "warn",
+      {
+        allowSeparatedGroups: true,
+        memberSyntaxSortOrder: ["none", "all", "single", "multiple"],
+        ignoreCase: false,
+      },
+    ],
   },
   overrides: [
     // Typescript overrides
@@ -141,7 +139,7 @@ module.exports = {
         // > 10 chars and contains a separator "." so it would have to follow the no-duplicate-string rule
         "sonarjs/no-duplicate-string": "off",
         //Default complexity is 15 but since cypress test have some before and after hooks, let's increase a little bit
-        "sonarjs/cognitive-complexity": ["error", 20],
+        "sonarjs/cognitive-complexity": ["warn", 20],
       },
     },
   ],
