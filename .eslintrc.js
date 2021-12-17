@@ -72,26 +72,27 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "warn",
     // enforce clean code
     "@typescript-eslint/no-unused-vars": "warn",
+    // Keep naming convention for later
     // enforce interface naming convention
-    "@typescript-eslint/naming-convention": [
-      "warn",
-      {
-        selector: "interface",
-        format: ["PascalCase"],
-        custom: {
-          regex: "^I[A-Z]",
-          match: true,
-        },
-      },
-      {
-        selector: "typeAlias",
-        format: ["PascalCase"],
-        custom: {
-          regex: "^T[A-Z]",
-          match: true,
-        },
-      },
-    ],
+    // "@typescript-eslint/naming-convention": [
+    //   "warn",
+    //   {
+    //     selector: "interface",
+    //     format: ["PascalCase"],
+    //     custom: {
+    //       regex: "^I[A-Z]",
+    //       match: true,
+    //     },
+    //   },
+    //   {
+    //     selector: "typeAlias",
+    //     format: ["PascalCase"],
+    //     custom: {
+    //       regex: "^T[A-Z]",
+    //       match: true,
+    //     },
+    //   },
+    // ],
     // enforce import ordering
     "sort-imports": [
       "warn",
