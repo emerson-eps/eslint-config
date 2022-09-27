@@ -24,7 +24,7 @@ module.exports = {
     // same as exclude in tsconfig.json
     "build",
     "coverage",
-    "dist*",
+    "dist",
     "doc",
     "node_modules",
     "tmp",
