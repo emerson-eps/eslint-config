@@ -8,7 +8,7 @@
     "commonjs": true
   },
   "globals": {},
-  "parser": "I:\\GitManaged\\GitHubEMR\\eslint-config\\node_modules\\@typescript-eslint\\parser\\dist\\index.js",
+  "parser": "/mnt/data/git/eslint-config/node_modules/@typescript-eslint/parser/dist/index.js",
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
@@ -29,51 +29,28 @@
   "reportUnusedDisableDirectives": true,
   "rules": {
     "curly": [
-      "error"
+      "warn"
     ],
     "no-console": [
-      "error"
+      "warn"
     ],
     "react-hooks/exhaustive-deps": [
-      "error"
+      "warn"
     ],
     "@typescript-eslint/no-explicit-any": [
-      "error"
+      "warn"
     ],
     "@typescript-eslint/ban-types": [
-      "error"
+      "warn"
     ],
     "@typescript-eslint/explicit-module-boundary-types": [
-      "error"
+      "warn"
     ],
     "@typescript-eslint/no-unused-vars": [
-      "error"
-    ],
-    "@typescript-eslint/naming-convention": [
-      "error",
-      {
-        "selector": "interface",
-        "format": [
-          "PascalCase"
-        ],
-        "custom": {
-          "regex": "^I[A-Z]",
-          "match": true
-        }
-      },
-      {
-        "selector": "typeAlias",
-        "format": [
-          "PascalCase"
-        ],
-        "custom": {
-          "regex": "^T[A-Z]",
-          "match": true
-        }
-      }
+      "warn"
     ],
     "sort-imports": [
-      "error",
+      "warn",
       {
         "allowSeparatedGroups": true,
         "memberSyntaxSortOrder": [
@@ -407,6 +384,9 @@
     "@typescript-eslint/semi": [
       "off"
     ],
+    "@typescript-eslint/space-before-blocks": [
+      "off"
+    ],
     "@typescript-eslint/space-before-function-paren": [
       "off"
     ],
@@ -602,6 +582,9 @@
     "vue/operator-linebreak": [
       "off"
     ],
+    "vue/quote-props": [
+      "off"
+    ],
     "vue/script-indent": [
       "off"
     ],
@@ -678,7 +661,7 @@
       "error"
     ],
     "sonarjs/no-inverted-boolean-check": [
-      "error"
+      "off"
     ],
     "sonarjs/no-nested-switch": [
       "error"
@@ -1227,6 +1210,12 @@
     "@typescript-eslint/no-inferrable-types": [
       "error"
     ],
+    "no-loss-of-precision": [
+      "off"
+    ],
+    "@typescript-eslint/no-loss-of-precision": [
+      "error"
+    ],
     "@typescript-eslint/no-misused-new": [
       "error"
     ],
@@ -1240,6 +1229,9 @@
       "warn"
     ],
     "@typescript-eslint/no-this-alias": [
+      "error"
+    ],
+    "@typescript-eslint/no-unnecessary-type-constraint": [
       "error"
     ],
     "@typescript-eslint/no-var-requires": [
@@ -1326,7 +1318,7 @@
   "ignorePatterns": [
     "build",
     "coverage",
-    "dist*",
+    "dist",
     "doc",
     "node_modules",
     "tmp"
