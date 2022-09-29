@@ -2,7 +2,11 @@
   "name": "@emerson-eps/eslint-config",
   "version": "0.0.0-development",
   "description": "Shared ESLint config for Emerson E&P Software",
-  "keywords": ["eslint", "eslintconfig", "typescript"],
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "typescript"
+  ],
   "homepage": "https://github.com/emerson-eps/eslint-config",
   "bugs": {
     "url": "https://github.com/emerson-eps/eslint-config/issues"
@@ -13,9 +17,12 @@
   },
   "license": "MIT",
   "main": "index.js",
-  "files": [".eslintrc.js", "index.js"],
+  "files": [
+    ".eslintrc.js",
+    "index.js"
+  ],
   "scripts": {
-    "build": "npm run print-config:file",
+    "build": "npm run print-config:file && tsc",
     "lint": "eslint . --max-warnings=0",
     "lint:fix": "eslint . --fix",
     "lint:verbose": "eslint --max-warnings=0 -f stylish .",
@@ -23,37 +30,39 @@
     "print-config": "eslint --print-config .eslintrc.js",
     "print-config:file": "eslint --print-config .eslintrc.js > config.json",
     "semantic-release": "semantic-release",
-    "test": "prettier . --check && eslint .",
+    "test": "prettier . --check && eslint . --max-warnings=0",
     "tsc": "tsc"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.37.0",
-    "@typescript-eslint/parser": "^5.37.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
     "babel-eslint": "^10.1.0",
-    "eslint-config-prettier": "^8.4.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-flowtype": "^5.10.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.29.1",
-    "eslint-plugin-react-hooks": "^4.4.0",
-    "eslint-plugin-sonarjs": "^0.12.0"
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-sonarjs": "^0.15.0"
   },
   "devDependencies": {
-    "conventional-changelog-conventionalcommits": "^4.6.1",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
     "eslint": "^7.32.0",
-    "prettier": "^2.4.1",
-    "semantic-release": "^19.0.3",
+    "prettier": "^2.7.1",
+    "semantic-release": "^19.0.5",
     "typescript": ">= 4.0"
   },
   "peerDependencies": {
     "eslint": "^7.32.0",
-    "prettier": "^2.4.1",
+    "prettier": "^2.7.1",
     "typescript": ">= 4.0"
   },
   "release": {
-    "branches": ["main"],
+    "branches": [
+      "main"
+    ],
     "preset": "conventionalcommits"
   }
 }
