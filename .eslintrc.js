@@ -62,8 +62,6 @@ module.exports = {
     curly: "warn",
     // Set console calls to emit warnings as not enabled by eslint:recommended
     "no-console": "warn",
-    // Increase react-hooks/exhaustive-deps from warning to error
-    "react-hooks/exhaustive-deps": "warn",
     // enforce types
     "@typescript-eslint/no-explicit-any": "warn",
     // Bans specific types from being used (e.g. builtin types)

@@ -15,7 +15,13 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": [
+        "/mnt/data/git/eslint-config/node_modules/babel-preset-react-app/prod.js"
+      ]
+    }
   },
   "plugins": [
     "jsx-a11y",
@@ -32,9 +38,6 @@
       "warn"
     ],
     "no-console": [
-      "warn"
-    ],
-    "react-hooks/exhaustive-deps": [
       "warn"
     ],
     "@typescript-eslint/no-explicit-any": [
@@ -711,6 +714,9 @@
     "react-hooks/rules-of-hooks": [
       "error"
     ],
+    "react-hooks/exhaustive-deps": [
+      "warn"
+    ],
     "react/display-name": [
       2
     ],
@@ -876,10 +882,10 @@
     "no-multi-str": [
       "warn"
     ],
-    "no-native-reassign": [
+    "no-global-assign": [
       "warn"
     ],
-    "no-negated-in-lhs": [
+    "no-unsafe-negation": [
       "warn"
     ],
     "no-new-func": [
@@ -1279,9 +1285,6 @@
     "no-extra-boolean-cast": [
       "error"
     ],
-    "no-global-assign": [
-      "error"
-    ],
     "no-import-assign": [
       "error"
     ],
@@ -1301,9 +1304,6 @@
       "error"
     ],
     "no-unsafe-finally": [
-      "error"
-    ],
-    "no-unsafe-negation": [
       "error"
     ],
     "no-useless-catch": [
