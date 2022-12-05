@@ -24,7 +24,7 @@
   "scripts": {
     "build": "npm run print-config:file && tsc",
     "lint": "eslint . --max-warnings=0",
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "eslint . --fix --max-warnings=0",
     "lint:verbose": "eslint --max-warnings=0 -f stylish .",
     "prettier:fix": "prettier . --write",
     "print-config": "eslint --print-config .eslintrc.js",
@@ -64,5 +64,8 @@
       "main"
     ],
     "preset": "conventionalcommits"
+  },
+  "volta": {
+    "node": "16.18.1"
   }
 }

@@ -136,8 +136,11 @@ module.exports = {
         //not compatible with asserts like should("be.visible")
         // > 10 chars and contains a separator "." so it would have to follow the no-duplicate-string rule
         "sonarjs/no-duplicate-string": "off",
-        //Default complexity is 15 but since cypress test have some before and after hooks, let's increase a little bit
+        // Default complexity is 15 but since cypress test have some before and after hooks, let's increase a little bit
         "sonarjs/cognitive-complexity": ["warn", 20],
+        // Allow assertion operator in unit tests because TS does not recognize
+        // jest expects such as toBeDefined() or not.toBeNull() as type-validating
+        "@typescript-eslint/no-non-null-assertion": "off",
       },
     },
   ],
