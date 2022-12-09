@@ -1297,6 +1297,9 @@
     "no-misleading-character-class": [
       "error"
     ],
+    "no-nonoctal-decimal-escape": [
+      "error"
+    ],
     "no-prototype-builtins": [
       "error"
     ],
@@ -1304,6 +1307,12 @@
       "error"
     ],
     "no-unsafe-finally": [
+      "error"
+    ],
+    "no-unsafe-optional-chaining": [
+      "error"
+    ],
+    "no-useless-backreference": [
       "error"
     ],
     "no-useless-catch": [
