@@ -34,8 +34,8 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.40.1",
-    "@typescript-eslint/parser": "^5.40.1",
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
     "babel-eslint": "^10.1.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-react-app": "^7.0.1",
@@ -43,20 +43,20 @@
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-sonarjs": "^0.16.0"
+    "eslint-plugin-sonarjs": "^0.17.0"
   },
   "devDependencies": {
     "conventional-changelog-conventionalcommits": "^5.0.0",
-    "eslint": "^7.32.0",
-    "prettier": "^2.7.1",
+    "eslint": "^8.29.0",
+    "prettier": "^2.8.1",
     "semantic-release": "^19.0.5",
     "typescript": ">= 4.0"
   },
   "peerDependencies": {
-    "eslint": "^7.32.0",
-    "prettier": "^2.7.1",
+    "eslint": "^8.29.0",
+    "prettier": "^2.8.1",
     "typescript": ">= 4.0"
   },
   "release": {
