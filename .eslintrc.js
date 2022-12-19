@@ -111,7 +111,7 @@ module.exports = {
     },
     // Test overrides
     {
-      files: ["**/*.test.{j,t}s?(x)","**/__*tests__/*"],
+      files: ["**/*.test.{j,t}s?(x)", "**/__*tests__/*"],
       rules: {
         // Allow assertion operator in unit tests because TS does not recognize
         // jest expects such as toBeDefined() or not.toBeNull() as type-validating
