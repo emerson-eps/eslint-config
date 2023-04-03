@@ -19,6 +19,8 @@ module.exports = {
     es6: true,
     jest: true,
     jasmine: true,
+    browser: true,
+    commonjs: true,
   },
   ignorePatterns: [
     // same as exclude in tsconfig.json
@@ -29,21 +31,24 @@ module.exports = {
     "node_modules",
     "tmp",
   ],
-  plugins: ["@typescript-eslint", "react", "react-hooks", "sonarjs"],
+  plugins: [
+    "@typescript-eslint",
+    "flowtype",
+    "import",
+    "jsx-a11y",
+    "react",
+    "react-hooks",
+    "sonarjs",
+  ],
   extends: [
     // Base recommended set of rules
     "eslint:recommended",
     // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/src/configs
     // recommended extends @typescript-eslint/eslint-recommended which disables some of eslint:recommended
     "plugin:@typescript-eslint/recommended",
-    // Set of rules defined by create-react-app
-    // Enables some of the react and react-hooks plugins rules but the set
-    // is not as extensive as react/recommended and react-hooks/recommended
-    // https://github.com/facebook/create-react-app/tree/master/packages/eslint-config-react-app
-    "react-app",
-    // Additional recommended react rules not all included in react-app
+    // Additional recommended react rules
     "plugin:react/recommended",
-    // Additional recommended react-hooks rules not all included in react-app
+    // Additional recommended react-hooks rules
     "plugin:react-hooks/recommended",
     // SonarJS recommended set
     "plugin:sonarjs/recommended",
@@ -69,7 +74,13 @@ module.exports = {
     // enforce typed exports
     "@typescript-eslint/explicit-module-boundary-types": "warn",
     // enforce clean code
-    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+      },
+    ],
     // Keep naming convention for later
     // enforce interface naming convention
     // "@typescript-eslint/naming-convention": [

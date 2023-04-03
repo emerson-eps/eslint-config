@@ -34,12 +34,11 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.55.0",
-    "@typescript-eslint/parser": "^5.55.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
     "babel-eslint": "^10.1.0",
-    "eslint-config-prettier": "^8.7.0",
-    "eslint-config-react-app": "^7.0.1",
-    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-cypress": "^2.13.2",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
@@ -49,14 +48,14 @@
   },
   "devDependencies": {
     "conventional-changelog-conventionalcommits": "^5.0.0",
-    "eslint": "^8.36.0",
-    "prettier": "^2.8.5",
+    "eslint": "^8.37.0",
+    "prettier": "^2.8.7",
     "semantic-release": "^19.0.5",
     "typescript": ">=4.9.5"
   },
   "peerDependencies": {
-    "eslint": "^8.36.0",
-    "prettier": "^2.8.5",
+    "eslint": "^8.37.0",
+    "prettier": "^2.8.7",
     "typescript": ">= 4.0"
   },
   "release": {
