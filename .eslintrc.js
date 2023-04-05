@@ -65,6 +65,22 @@ module.exports = {
     // Enforced
     //
     curly: "warn",
+    // Force import first
+    "import/first": "warn",
+    "import/order": [
+      "warn",
+      {
+        groups: ["builtin", "external"],
+        pathGroups: [
+          {
+            pattern: "@epconnect/**",
+            group: "external",
+            position: "after",
+          },
+        ],
+        "newlines-between": "always-and-inside-groups",
+      },
+    ],
     // Set console calls to emit warnings as not enabled by eslint:recommended
     "no-console": "warn",
     // enforce types

@@ -18,18 +18,40 @@
     "project": "./tsconfig.json"
   },
   "plugins": [
-    "@typescript-eslint",
     "sonarjs",
     "react-hooks",
     "react",
     "jsx-a11y",
     "import",
-    "flowtype"
+    "flowtype",
+    "@typescript-eslint"
   ],
   "reportUnusedDisableDirectives": true,
   "rules": {
     "curly": [
       "warn"
+    ],
+    "import/first": [
+      "warn"
+    ],
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@epconnect/**",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "newlines-between": "always-and-inside-groups",
+        "distinctGroup": true,
+        "warnOnUnassignedImports": false
+      }
     ],
     "no-console": [
       "warn"
