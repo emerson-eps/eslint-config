@@ -34,9 +34,9 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.59.2",
-    "@typescript-eslint/parser": "^5.59.2",
-    "babel-eslint": "^10.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "@babel/eslint-parser": "^7.22.7",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-cypress": "^2.13.3",
     "eslint-plugin-flowtype": "^8.0.3",
@@ -48,14 +48,14 @@
   },
   "devDependencies": {
     "conventional-changelog-conventionalcommits": "^5.0.0",
-    "eslint": "^8.39.0",
+    "eslint": "^8.44.0",
     "prettier": "^2.8.8",
     "semantic-release": "^19.0.5",
     "typescript": ">=4.9.5"
   },
   "peerDependencies": {
-    "eslint": "^8.37.0",
-    "prettier": "^2.8.7",
+    "eslint": "^8.44.0",
+    "prettier": "^2.8.8",
     "typescript": ">= 4.0"
   },
   "release": {
@@ -65,6 +65,6 @@
     "preset": "conventionalcommits"
   },
   "volta": {
-    "node": "16.18.1"
+    "node": "16.20.1"
   }
 }
