@@ -34,7 +34,7 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.61.0",
     "@babel/eslint-parser": "^7.22.7",
     "eslint-config-prettier": "^8.8.0",
