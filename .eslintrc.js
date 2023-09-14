@@ -43,9 +43,11 @@ module.exports = {
   extends: [
     // Base recommended set of rules
     "eslint:recommended",
-    // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/src/configs
-    // recommended extends @typescript-eslint/eslint-recommended which disables some of eslint:recommended
-    "plugin:@typescript-eslint/recommended",
+
+    // https://typescript-eslint.io/linting/configs/#recommended-configurations
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/stylistic",
+
     // Additional recommended react rules
     "plugin:react/recommended",
     // Additional recommended react-hooks rules
@@ -203,6 +205,22 @@ module.exports = {
         ],
       },
     ],
+
+    // Relax some @typescript-eslint/recommended-type-checked rules
+    // Sometimes we use any type implictely, because we don't have the type at all
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-enum-comparison": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+
+    // Relax some @typescript-eslint/stylistic rules
+    // Allow to use indexed objects
+    "@typescript-eslint/consistent-indexed-object-style": "off",
+    // Allow to use interfaces and types
+    "@typescript-eslint/consistent-type-definitions": "off",
+    // Allow to use T[] and Array<T>
+    "@typescript-eslint/array-type": "off",
   },
   overrides: [
     // Typescript overrides
