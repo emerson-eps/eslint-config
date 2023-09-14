@@ -35,30 +35,30 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@babel/eslint-parser": "^7.25.1",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
-    "eslint-config-prettier": "^8.10.0",
-    "eslint-plugin-cypress": "^2.15.1",
+    "@babel/eslint-parser": "^7.25.9",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-cypress": "^2.15.2",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-sonarjs": "^0.25.0"
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.3",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-sonarjs": "^0.25.1"
   },
   "devDependencies": {
     "@tillig/json-sort-cli": "^1.1.1",
-    "@types/node": "^18.19.24",
+    "@types/node": "^18.19.70",
     "conventional-changelog-conventionalcommits": "^5.0.0",
-    "eslint": "^8.57.0",
-    "prettier": "^3.4.0",
+    "eslint": "^8.57.1",
+    "prettier": "^3.4.2",
     "semantic-release": "^22.0.12",
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
-    "eslint": "^8.49.0",
-    "prettier": "^3.2.5",
+    "eslint": "^8.57",
+    "prettier": "^3",
     "typescript": ">= 4.0"
   },
   "release": {
