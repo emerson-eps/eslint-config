@@ -24,12 +24,12 @@ module.exports = {
   },
   ignorePatterns: [
     // same as exclude in tsconfig.json
-    "build",
-    "coverage",
-    "dist",
-    "doc",
-    "node_modules",
-    "tmp",
+    "/build",
+    "/coverage",
+    "/dist",
+    "/doc",
+    "/node_modules",
+    "/tmp",
   ],
   plugins: [
     "@typescript-eslint",
