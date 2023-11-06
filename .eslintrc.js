@@ -127,6 +127,82 @@ module.exports = {
         ignoreCase: false,
       },
     ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        paths: [
+          {
+            name: "@mui/material",
+            importNames: [
+              "Table",
+              "Dialog",
+              "Tooltip",
+              "Button",
+              "TextField",
+              "Select",
+              "Switch",
+              "Tab",
+              "Tabs",
+            ],
+            message: "Please import from '@epconnect/mui-components' instead.",
+          },
+          {
+            name: "@mui/material/Table",
+            importNames: ["default"],
+            message:
+              "Please import Table from '@epconnect/mui-components' instead.",
+          },
+          {
+            name: "@mui/material/Dialog",
+            importNames: ["default"],
+            message:
+              "Please import ResponsiveDialog from '@epconnect/mui-components' instead.",
+          },
+          {
+            name: "@mui/material/Tooltip",
+            importNames: ["default"],
+            message:
+              "Please import Tooltip from '@epconnect/mui-components' instead.",
+          },
+          {
+            name: "@mui/material/Button",
+            importNames: ["default"],
+            message:
+              "Please import Button from '@epconnect/mui-components' instead.",
+          },
+          {
+            name: "@mui/material/TextField",
+            importNames: ["default"],
+            message:
+              "Please import TextField from '@epconnect/mui-components' instead.",
+          },
+          {
+            name: "@mui/material/Select",
+            importNames: ["default"],
+            message:
+              "Please import SmartSelector from '@epconnect/mui-components' instead.",
+          },
+          {
+            name: "@mui/material/Switch",
+            importNames: ["default"],
+            message:
+              "Please import SwitchControl from '@epconnect/mui-components' instead.",
+          },
+          {
+            name: "@mui/material/Tab",
+            importNames: ["default"],
+            message:
+              "Please import TabsBar from '@epconnect/mui-components' instead.",
+          },
+          {
+            name: "@mui/material/Tabs",
+            importNames: ["default"],
+            message:
+              "Please import TabsBar from '@epconnect/mui-components' instead.",
+          },
+        ],
+      },
+    ],
   },
   overrides: [
     // Typescript overrides
