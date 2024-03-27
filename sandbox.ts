@@ -23,6 +23,5 @@ console.log(fs.readSync);
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const getDummy = (param: unknown) => {
-  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
   console.log(`${dummy} and ${param} a, ${first}, ${pkg.version}`);
 };

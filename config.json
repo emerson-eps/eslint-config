@@ -187,6 +187,9 @@
     "@typescript-eslint/no-unsafe-member-access": [
       "off"
     ],
+    "@typescript-eslint/restrict-template-expressions": [
+      "off"
+    ],
     "@typescript-eslint/consistent-indexed-object-style": [
       "off"
     ],
@@ -1022,9 +1025,6 @@
       "error"
     ],
     "@typescript-eslint/restrict-plus-operands": [
-      "error"
-    ],
-    "@typescript-eslint/restrict-template-expressions": [
       "error"
     ],
     "@typescript-eslint/triple-slash-reference": [
