@@ -214,6 +214,9 @@ module.exports = {
     "@typescript-eslint/no-unsafe-enum-comparison": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
 
+    // Allow to serialize caught variables like `${err}` (because err would have unknown type by default)
+    "@typescript-eslint/restrict-template-expressions": "off",
+
     // Relax some @typescript-eslint/stylistic rules
     // Allow to use indexed objects
     "@typescript-eslint/consistent-indexed-object-style": "off",
@@ -237,6 +240,18 @@ module.exports = {
         // Allow assertion operator in unit tests because TS does not recognize
         // jest expects such as toBeDefined() or not.toBeNull() as type-validating
         "@typescript-eslint/no-non-null-assertion": "off",
+        // Lots of tests can have async test callback, for consistency and easy update
+        // Allow to have them without await in the callback body, because side effect in tests are minimal
+        "@typescript-eslint/require-await": "off",
+      },
+    },
+    // TSOA/Nest Overrides
+    {
+      files: ["**/controllers/**"],
+      rules: {
+        // Some annotations helpers must be used but explicitly return any
+        // Disable them for those cases
+        "@typescript-eslint/no-unsafe-return": "off",
       },
     },
     // Storybook overrides
