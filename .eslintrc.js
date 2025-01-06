@@ -43,9 +43,11 @@ module.exports = {
   extends: [
     // Base recommended set of rules
     "eslint:recommended",
-    // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/src/configs
-    // recommended extends @typescript-eslint/eslint-recommended which disables some of eslint:recommended
-    "plugin:@typescript-eslint/recommended",
+
+    // https://typescript-eslint.io/linting/configs/#recommended-configurations
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/stylistic",
+
     // Additional recommended react rules
     "plugin:react/recommended",
     // Additional recommended react-hooks rules
@@ -203,6 +205,25 @@ module.exports = {
         ],
       },
     ],
+
+    // Relax some @typescript-eslint/recommended-type-checked rules
+    // Sometimes we use any type implictely, because we don't have the type at all
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-enum-comparison": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+
+    // Allow to serialize caught variables like `${err}` (because err would have unknown type by default)
+    "@typescript-eslint/restrict-template-expressions": "off",
+
+    // Relax some @typescript-eslint/stylistic rules
+    // Allow to use indexed objects
+    "@typescript-eslint/consistent-indexed-object-style": "off",
+    // Allow to use interfaces and types
+    "@typescript-eslint/consistent-type-definitions": "off",
+    // Allow to use T[] and Array<T>
+    "@typescript-eslint/array-type": "off",
   },
   overrides: [
     // Typescript overrides
@@ -219,6 +240,18 @@ module.exports = {
         // Allow assertion operator in unit tests because TS does not recognize
         // jest expects such as toBeDefined() or not.toBeNull() as type-validating
         "@typescript-eslint/no-non-null-assertion": "off",
+        // Lots of tests can have async test callback, for consistency and easy update
+        // Allow to have them without await in the callback body, because side effect in tests are minimal
+        "@typescript-eslint/require-await": "off",
+      },
+    },
+    // TSOA/Nest Overrides
+    {
+      files: ["**/controllers/**"],
+      rules: {
+        // Some annotations helpers must be used but explicitly return any
+        // Disable them for those cases
+        "@typescript-eslint/no-unsafe-return": "off",
       },
     },
     // Storybook overrides
