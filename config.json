@@ -50,6 +50,7 @@
         ],
         "newlines-between": "always-and-inside-groups",
         "distinctGroup": true,
+        "named": false,
         "warnOnUnassignedImports": false
       }
     ],
