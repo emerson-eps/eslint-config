@@ -60,11 +60,6 @@
     "typescript": ">= 5.0"
   },
   "release": {
-    "branches": [
-      "main", 
-      "alpha",
-      "beta"
-    ],
     "preset": "conventionalcommits"
   },
   "volta": {
