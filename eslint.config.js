@@ -24,6 +24,7 @@ export default defineConfig([
   react.configs.flat["jsx-runtime"],
   //reactHooks.configs['recommended-latest'],
   importConfigs.recommended,
+  importConfigs.typescript,
   jsxA11y.flatConfigs.recommended,
   sonarjsConfigs.recommended,
   {
@@ -31,8 +32,6 @@ export default defineConfig([
     plugins: {
       "react-hooks": reactHooksPlugin,
     },
-    extends: [importConfigs.recommended, importConfigs.typescript],
-
     settings: {
       react: { version: "detect" },
       "import-x/resolver": {
@@ -189,12 +188,10 @@ export default defineConfig([
   },
   {
     files: ["cypress/**/*.{j,t}s?(x)"],
-    plugins: { 
-      cypress: pluginCypress 
+    plugins: {
+      cypress: pluginCypress,
     },
-    extends: [
-      pluginCypress.configs.recommended
-    ],
+    extends: [pluginCypress.configs.recommended],
     rules: {
       "sonarjs/no-duplicate-string": "off",
       "sonarjs/cognitive-complexity": ["warn", 20],
