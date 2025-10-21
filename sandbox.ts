@@ -48,11 +48,8 @@ spawnSync("git", args, { encoding: "utf8" });
 // test sonarjs/no-nested-functions
 [[[[[[[]]]]]]].forEach((f) =>
   f.forEach((f) =>
-    f.forEach((f) => 
-      f.forEach((f) => 
-        f.forEach((f) => 
-          console.log(`deep ${f}`))
-      )
-    )
-  )
+    f.forEach((f) =>
+      f.forEach((f) => f.forEach((f) => console.log(`deep ${f}`))),
+    ),
+  ),
 );
