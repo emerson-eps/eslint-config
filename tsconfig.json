@@ -2,8 +2,8 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "noEmit": true,
     "strict": true,
     "sourceMap": true,
@@ -24,7 +24,8 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     // decorators, e.g. for tsoa
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "skipLibCheck": true
   },
   "exclude": ["node_modules", "tmp"]
 }
