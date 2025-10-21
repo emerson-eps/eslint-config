@@ -1,4 +1,4 @@
-import cypress from "eslint-plugin-cypress";
+import pluginCypress from "eslint-plugin-cypress";
 import eslint from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 import { flatConfigs as importConfigs } from "eslint-plugin-import-x";
@@ -189,8 +189,12 @@ export default defineConfig([
   },
   {
     files: ["cypress/**/*.{j,t}s?(x)"],
-    plugins: { cypress },
-    extends: ["cypress/recommended"],
+    plugins: { 
+      cypress: pluginCypress 
+    },
+    extends: [
+      pluginCypress.configs.recommended
+    ],
     rules: {
       "sonarjs/no-duplicate-string": "off",
       "sonarjs/cognitive-complexity": ["warn", 20],
