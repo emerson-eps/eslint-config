@@ -3,7 +3,5 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/* eslint @typescript-eslint/no-var-requires: "off" */
-const eslintrc = require("./.eslintrc.js");
-
-module.exports = eslintrc;
+import eslintrc from "./eslint.config.js";
+export default eslintrc;

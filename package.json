@@ -2,6 +2,7 @@
   "name": "@emerson-eps/eslint-config",
   "version": "0.0.0-development",
   "description": "Shared ESLint config for Emerson E&P Software",
+  "type": "module",
   "keywords": [
     "eslint",
     "eslintconfig",
@@ -18,7 +19,7 @@
   "license": "MIT",
   "main": "index.js",
   "files": [
-    ".eslintrc.js",
+    "eslint.config.js",
     "index.js"
   ],
   "scripts": {
@@ -27,36 +28,44 @@
     "lint:fix": "eslint . --fix --max-warnings=0",
     "lint:verbose": "eslint --max-warnings=0 -f stylish .",
     "prettier:fix": "prettier . --write",
-    "print-config": "eslint --print-config .eslintrc.js",
-    "print-config:file": "eslint --print-config .eslintrc.js > config.json",
+    "print-config": "eslint --print-config .eslintrc.config.js",
+    "print-config:file": "eslint --print-config .eslintrc.config.js > config.json",
     "semantic-release": "semantic-release",
     "test": "prettier . --check && eslint . --max-warnings=0",
     "tsc": "tsc"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
-    "@babel/eslint-parser": "^7.26.10",
-    "eslint-config-prettier": "^8.10.0",
-    "eslint-plugin-cypress": "^2.15.2",
-    "eslint-plugin-flowtype": "^8.0.3",
-    "eslint-plugin-import": "^2.31.0",
+    "@babel/eslint-parser": "^7.28.4",
+    "@eslint/compat": "^1.4.0",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.36.0",
+    "@types/eslint-plugin-jsx-a11y": "^6.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@typescript-eslint/parser": "^8.45.0",
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-cypress": "^5.2.0",
+    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-jsdoc": "^61.1.4",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-sonarjs": "^0.25.1"
+    "eslint-plugin-react-hooks": "^6.1.1",
+    "eslint-plugin-sonarjs": "^3.0.5",
+    "eslint-plugin-testing-library": "^7.13.2",
+    "globals": "^16.4.0",
+    "prettier": "^3",
+    "typescript-eslint": "^8.45.0"
   },
   "devDependencies": {
     "@types/node": "^20.19.23",
     "conventional-changelog-conventionalcommits": "^9.1.0",
-    "eslint": "^8.57.1",
-    "prettier": "^3.6.2",
     "semantic-release": "^24.2.9",
-    "typescript": "^5.7.3"
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "eslint": "^8.57.1",
-    "prettier": "^3.6.2",
+    "eslint": "^9",
+    "prettier": "^3",
     "typescript": ">= 5.0"
   },
   "release": {

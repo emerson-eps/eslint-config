@@ -12,7 +12,7 @@ node_modules/
 .scannerwork/
 
 # Generated files
-config.json
+config*.json
 
 # npm can rewrite the whole package.json file with some commands
 package.json
