@@ -2638,7 +2638,7 @@
   },
   "plugins": [
     "@",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.45.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.46.2",
     "react",
     "import-x:eslint-plugin-import-x@4.16.1",
     "jsx-a11y:eslint-plugin-jsx-a11y@6.10.2",
@@ -2648,7 +2648,7 @@
   "languageOptions": {
     "sourceType": "module",
     "ecmaVersion": 2026,
-    "parser": "typescript-eslint/parser@8.45.0",
+    "parser": "typescript-eslint/parser@8.46.2",
     "parserOptions": {
       "ecmaFeatures": {
         "jsx": true
