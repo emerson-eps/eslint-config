@@ -28,8 +28,8 @@
     "lint:fix": "eslint . --fix --max-warnings=0",
     "lint:verbose": "eslint --max-warnings=0 -f stylish .",
     "prettier:fix": "prettier . --write",
-    "print-config": "eslint --print-config .eslintrc.config.js",
-    "print-config:file": "eslint --print-config .eslintrc.config.js > config.json",
+    "print-config": "eslint --print-config eslint.config.js",
+    "print-config:file": "eslint --print-config eslint.config.js > config.json",
     "semantic-release": "semantic-release",
     "test": "prettier . --check && eslint . --max-warnings=0",
     "tsc": "tsc"
