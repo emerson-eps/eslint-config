@@ -10,7 +10,7 @@ import reactHooksPlugin from "eslint-plugin-react-hooks";
 import { configs as sonarjsConfigs } from "eslint-plugin-sonarjs";
 import { configs as tsConfigs } from "typescript-eslint";
 import { defineConfig, globalIgnores } from "eslint/config";
-import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
 
 import testingLibrary from "eslint-plugin-testing-library";
 
@@ -67,7 +67,7 @@ export default defineConfig([
       "unicorn/no-useless-undefined": "off",
       "unicorn/no-process-exit": "off",
 
-      "curly": "warn",
+      curly: "warn",
 
       "import-x/first": "warn",
 
