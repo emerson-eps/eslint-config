@@ -6,10 +6,11 @@ import { flatConfigs as importConfigs } from "eslint-plugin-import-x";
 // import jsdoc from "eslint-plugin-jsdoc";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
-import { default as reactHooksPlugin } from "eslint-plugin-react-hooks";
+import reactHooksPlugin from "eslint-plugin-react-hooks";
 import { configs as sonarjsConfigs } from "eslint-plugin-sonarjs";
 import { configs as tsConfigs } from "typescript-eslint";
 import { defineConfig, globalIgnores } from "eslint/config";
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
 import testingLibrary from "eslint-plugin-testing-library";
 
@@ -18,13 +19,15 @@ export default defineConfig([
   eslint.configs.recommended,
   tsConfigs.recommended,
   eslintConfigPrettier,
+  importConfigs.recommended,
+  importConfigs.typescript,
+  //reactHooksPlugin.configs["flat/recommended"],
   // enable jsdoc later
   // jsdoc.configs["flat/recommended"],
   react.configs.flat.recommended,
   react.configs.flat["jsx-runtime"],
   //reactHooks.configs['recommended-latest'],
-  importConfigs.recommended,
-  importConfigs.typescript,
+  eslintPluginUnicorn.configs.unopinionated,
   jsxA11y.flatConfigs.recommended,
   sonarjsConfigs.recommended,
   {
@@ -40,6 +43,7 @@ export default defineConfig([
       },
     },
     rules: {
+      // React Hooks rules are now configured via flat/recommended config above
       // To replace
       // //extends: ["react-hooks/recommended"],
       // which does not work with flat config yet
@@ -59,7 +63,11 @@ export default defineConfig([
       "sonarjs/no-nested-functions": ["warn", { threshold: 5 }],
       "sonarjs/no-os-command-from-path": "off",
 
-      curly: "warn",
+      "unicorn/prefer-ternary": ["error", "only-single-line"],
+      "unicorn/no-useless-undefined": "off",
+      "unicorn/no-process-exit": "off",
+
+      "curly": "warn",
 
       "import-x/first": "warn",
 

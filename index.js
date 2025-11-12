@@ -3,5 +3,4 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import eslintrc from "./eslint.config.js";
-export default eslintrc;
+export { default } from "./eslint.config.js";
