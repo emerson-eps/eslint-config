@@ -68,9 +68,9 @@ export default defineConfig([
       "unicorn/no-process-exit": "off",
 
       curly: "warn",
+      "no-console": "warn",
 
       "import-x/first": "warn",
-
       "import-x/order": [
         "warn",
         {
@@ -83,11 +83,9 @@ export default defineConfig([
         },
       ],
 
-      "no-console": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-restricted-types": "warn",
       "@typescript-eslint/explicit-module-boundary-types": "error",
-
       "@typescript-eslint/no-unused-vars": [
         "warn",
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
