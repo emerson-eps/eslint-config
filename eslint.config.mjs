@@ -11,11 +11,21 @@ import { configs as sonarjsConfigs } from "eslint-plugin-sonarjs";
 import { configs as tsConfigs } from "typescript-eslint";
 import { defineConfig, globalIgnores } from "eslint/config";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
-
+import jestdomLibrary from "eslint-plugin-jest-dom";
 import testingLibrary from "eslint-plugin-testing-library";
 
 export default defineConfig([
-  globalIgnores(["build", "coverage", "dist", "doc", "node_modules", "tmp"]),
+  globalIgnores([
+    "build",
+    "coverage",
+    "dist",
+    "doc",
+    "node_modules",
+    "tmp",
+    "guidelines",
+    "storybook-static",
+    "assets",
+  ]),
   eslint.configs.recommended,
   tsConfigs.recommended,
   eslintConfigPrettier,
@@ -186,6 +196,7 @@ export default defineConfig([
   {
     files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
     ...testingLibrary.configs["flat/react"],
+    ...jestdomLibrary.configs["flat/recommended"],
     rules: { "@typescript-eslint/no-non-null-assertion": "off" },
   },
   {

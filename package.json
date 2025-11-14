@@ -17,10 +17,10 @@
     "url": "https://github.com/emerson-eps/eslint-config.git"
   },
   "license": "MIT",
-  "main": "index.js",
+  "main": "index.mjs",
   "files": [
-    "eslint.config.js",
-    "index.js"
+    "eslint.config.mjs",
+    "index.mjs"
   ],
   "scripts": {
     "build": "npm run print-config:file && tsc",
@@ -28,8 +28,8 @@
     "lint:fix": "eslint . --fix --max-warnings=0",
     "lint:verbose": "eslint --max-warnings=0 -f stylish .",
     "prettier:fix": "prettier . --write",
-    "print-config": "eslint --print-config eslint.config.js",
-    "print-config:file": "eslint --print-config eslint.config.js > config.json",
+    "print-config": "eslint --print-config eslint.config.mjs",
+    "print-config:file": "eslint --print-config eslint.config.mjs > config.json",
     "semantic-release": "semantic-release",
     "test": "prettier . --check && eslint . --max-warnings=0",
     "tsc": "tsc"
@@ -42,6 +42,7 @@
     "@typescript-eslint/parser": "^8.46.2",
     "eslint": "^9",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jest-dom": "^5.5.0",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-cypress": "^5.2.0",
     "eslint-plugin-import-x": "^4.16.1",
