@@ -93,6 +93,10 @@
       {
         "paths": [
           {
+            "name": "@mui/icons-material",
+            "message": "Import specific icons from '@mui/icons-material/<IconName>'"
+          },
+          {
             "name": "@mui/material",
             "importNames": [
               "Table",
