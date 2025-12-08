@@ -60,7 +60,10 @@
     "typescript": ">= 5.0"
   },
   "release": {
-    "preset": "conventionalcommits"
+    "preset": "conventionalcommits",
+    "branches": [
+      "main"
+    ]
   },
   "volta": {
     "node": "20.18.1"
