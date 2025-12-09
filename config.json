@@ -88,10 +88,20 @@
         "ignoreMemberSort": false
       }
     ],
+    "import/no-namespace": [
+      "warn",
+      {
+        "ignore": []
+      }
+    ],
     "no-restricted-imports": [
       "warn",
       {
         "paths": [
+          {
+            "name": "lodash",
+            "message": "Do not import the entire lodash library. Import specific modules, e.g. 'lodash/cloneDeep' or use 'lodash-es'."
+          },
           {
             "name": "@mui/icons-material",
             "message": "Import specific icons from '@mui/icons-material/<IconName>'"
