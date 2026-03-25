@@ -1,6 +1,6 @@
 {
   "name": "@emerson-eps/eslint-config",
-  "version": "0.0.0-development",
+  "version": "7.0.12",
   "description": "Shared ESLint config for Emerson E&P Software",
   "keywords": [
     "eslint",
