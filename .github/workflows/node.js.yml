@@ -9,9 +9,9 @@ on:
     branches: ["main", "alpha", "beta"]
 
 permissions:
-  id-token: write       # Required for OIDC
-  contents: write       # Required for semantic-release to create tags
-  pull-requests: write  # Required for semantic-release to comment on PRs
+  id-token: write # Required for OIDC
+  contents: write # Required for semantic-release to create tags
+  pull-requests: write # Required for semantic-release to comment on PRs
 
 jobs:
   build:
